@@ -86,7 +86,7 @@ function getMonthEvents(/*$year, $month*/) {
   $sql = 
     "SELECT p.id AS post_id, p.post_title, STR_TO_DATE(pm.meta_value, '%Y-%m-%d') AS start_date"
     ." FROM wp_postmeta pm"
-    ."  INNER JOIN wp_posts p ON ( p.id = pm.post_id )"
+    ."  INNER JOIN wp_posts p ON ( p.id = pm.post_id AND p.post_status = 'publish')"
     ." WHERE (pm.meta_key = '_EventStartDate' AND"
     ."   STR_TO_DATE(pm.meta_value,  '%Y-%m-%d %H:%i:%s' )"  
     ."     BETWEEN STR_TO_DATE('2012-10-01 00:00', '%Y-%m-%d %H:%i:')"

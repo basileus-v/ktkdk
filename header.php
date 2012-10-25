@@ -126,7 +126,7 @@
         <?php print_calendar(); ?>
         <div class="clear"></div>
       </div> <!-- #calend -->
-
+      <?php tribe_calendar_mini_grid(); ?>
       <div class="banner-left">
         <a href="<?php echo esc_url(site_url('/uritused/2013-2/talvekool-2013/?lang=')).qtrans_getLanguage(); ?>">
         <img src="<?php bloginfo('template_directory'); ?>/images/banners/banner_winter_school_2013.jpg" width="212" height="525" alt="" />
