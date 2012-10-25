@@ -42,6 +42,7 @@ $monthView = tribe_sort_by_month( $eventPosts, $current_date );
 // the div tribe-events-widget-nav controls ajax navigation for the calendar widget. Modify with care and do not remove any class names or elements inside that element if you wish to retain ajax functionality.
 
 ?>
+<div id="calendar_wrap">
 <div class="tribe-events-widget-nav">
   <a class="tribe-mini-ajax prev-month" href="#" data-month="<?php echo $tribe_ecp->previousMonth( $current_date ); ?>" title="<?php echo tribe_get_previous_month_text(); ?>">
     <span><?php echo tribe_get_previous_month_text(); ?></span>
@@ -115,7 +116,7 @@ $monthView = tribe_sort_by_month( $eventPosts, $current_date );
 </table>
 
 <a class="tribe-view-all-events" href="<?php echo tribe_get_events_link(); ?>"><?php _e('View all &raquo;', 'tribe-events-calendar'); ?></a>
-
+</div> <!-- #calendar_wrap -->
 <?php
 if ($old_date){
 	$wp_query->query_vars['eventDate'] = $old_date;

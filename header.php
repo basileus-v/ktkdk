@@ -57,6 +57,34 @@
         //$j('.content-picture').css('min-width', $j('.fill').width() + 600);
         $j('#main').css('min-height', $j('#left-column').height());
         $j('.qtrans_language_chooser').find("li").find("a").find("span").each(function($idx) { if ($idx > 0) {$j(this).html(' | ' + $j(this).html());} });
+
+
+
+$j('#calendar_wrap .tribe-mini-ajax').live( 'click', function(e){
+    e.preventDefault();    
+    var month_target = $j(this).attr("data-month");
+    var params = {
+      action: 'calendar-mini',
+      eventDate: month_target
+    };
+    $j("#tribe-mini-ajax-month").hide();
+    $j("#ajax-loading-mini").show();
+    $j.post("http://193.40.128.92/wp-admin/admin-ajax.php",
+/*	  TribeMiniCalendar.ajaxurl,*/
+      params,
+      function ( response ) {
+        $j("#ajax-loading-mini").hide();
+        $j("#tribe-mini-ajax-month").show();
+        $j("#calendar_wrap").html( response );
+      }
+      );
+  });   
+
+
+
+
+
+
       });	
     </script>
 
