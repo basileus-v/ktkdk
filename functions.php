@@ -19,6 +19,8 @@ function register_ktkdk_sidebars() {
 add_action( 'init', 'register_ktkdk_menus' );
 add_action( 'init', 'register_ktkdk_sidebars' );
 
+add_action('wp_ajax_nopriv_calendar_mini', 'tribe_calendar_mini_grid');
+
 
 
 

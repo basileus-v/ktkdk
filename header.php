@@ -64,7 +64,7 @@ $j('#calendar_wrap .tribe-mini-ajax').live( 'click', function(e){
     e.preventDefault();    
     var month_target = $j(this).attr("data-month");
     var params = {
-      action: 'calendar-mini',
+      action: 'calendar_mini',
       eventDate: month_target
     };
     $j("#tribe-mini-ajax-month").hide();

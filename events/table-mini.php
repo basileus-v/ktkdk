@@ -26,6 +26,10 @@ if ( !defined( "DOING_AJAX" ) || !DOING_AJAX ) {
 
 
 $eventPosts = tribe_get_events(array( 'eventDisplay'=>'month' ) );
+if (isset($_POST['eventDate'])) {
+  $current_date = $_POST['eventDate'];
+}
+
 if ( !$current_date ) {
 	$current_date = $tribe_ecp->date;
 }
@@ -50,10 +54,10 @@ $monthView = tribe_sort_by_month( $eventPosts, $current_date );
   <span id="tribe-mini-ajax-month">
     <?php echo $tribe_ecp->monthsShort[date('M',$date)]; echo date(' Y',$date); ?>
   </span>
+  <img id="ajax-loading-mini" src="<?php echo esc_url( admin_url( 'images/wpspin_light.gif' ) ); ?>" alt="loading..." style="display: none;"/>
   <a class="tribe-mini-ajax next-month" href="#" data-month="<?php echo $tribe_ecp->nextMonth( $current_date ); ?>" title="<?php echo tribe_get_next_month_text(); ?>">
     <span><?php echo tribe_get_next_month_text(); ?></span> 
   </a>
-  <img id="ajax-loading-mini" src="<?php echo esc_url( admin_url( 'images/wpspin_light.gif' ) ); ?>" alt="loading..." style="display: none;"/>
 </div>  
 <table class="tribe-events-calendar tribe-events-calendar-widget" id="small">
 	<thead>
