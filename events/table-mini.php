@@ -22,13 +22,15 @@ if ( !defined( "DOING_AJAX" ) || !DOING_AJAX ) {
 	$current_date = $tribe_ecp->date;
 }
 
+ if (isset($_POST['eventDate'])) {
+    $current_date = $_POST['eventDate'];
+  }
+
+
 
 
 
 $eventPosts = tribe_get_events(array( 'eventDisplay'=>'month' ) );
-if (isset($_POST['eventDate'])) {
-  $current_date = $_POST['eventDate'];
-}
 
 if ( !$current_date ) {
 	$current_date = $tribe_ecp->date;
