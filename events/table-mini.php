@@ -7,33 +7,29 @@
 
 // Don't load directly
 if ( !defined('ABSPATH') ) { die('-1'); }
-
 $tribe_ecp = TribeEvents::instance();
 
 global $wp_query;
+
+/* NB! Requires patch in wp-content/plugins/the-events-calendar/lib/tribe-event-query.class.php:
+   !is_admin() --> (isset($wp_query->query_vars['calendar-mini-ajax']) || !is_admin())
+*/
+$wp_query->query_vars['calendar-mini-ajax'] = 'true';
+
 $old_date = null;
-if ( !defined( "DOING_AJAX" ) || !DOING_AJAX ) {
-	$current_date = date_i18n( TribeDateUtils::DBYEARMONTHTIMEFORMAT ) . "-01";
-	if ( isset( $wp_query->query_vars['eventDate'] ) ) {
-		$old_date                          = $wp_query->query_vars['eventDate'];
-		$wp_query->query_vars['eventDate'] = $current_date;
-	}
-}else{
+if (isset($_POST['eventDate']) ) {
+        $wp_query->set('eventDate', $_POST['eventDate']);
+	$current_date = $_POST['eventDate'] . "-01";
+	$old_date = $wp_query->query_vars['eventDate'];
+} else {
 	$current_date = $tribe_ecp->date;
 }
-
- if (isset($_POST['eventDate'])) {
-    $current_date = $_POST['eventDate'];
-  }
-
-
-
 
 
 $eventPosts = tribe_get_events(array( 'eventDisplay'=>'month' ) );
 
 if ( !$current_date ) {
-	$current_date = $tribe_ecp->date;
+  $current_date = $tribe_ecp->date;
 }
 
 $daysInMonth = isset($date) ? date("t", $date) : date("t");
@@ -48,15 +44,14 @@ $monthView = tribe_sort_by_month( $eventPosts, $current_date );
 // the div tribe-events-widget-nav controls ajax navigation for the calendar widget. Modify with care and do not remove any class names or elements inside that element if you wish to retain ajax functionality.
 
 ?>
-<div id="calendar_wrap">
-<div class="tribe-events-widget-nav">
+<div class="tribe-events-widget-nav">  
   <a class="tribe-mini-ajax prev-month" href="#" data-month="<?php echo $tribe_ecp->previousMonth( $current_date ); ?>" title="<?php echo tribe_get_previous_month_text(); ?>">
     <span><?php echo tribe_get_previous_month_text(); ?></span>
   </a>
   <span id="tribe-mini-ajax-month">
     <?php echo $tribe_ecp->monthsShort[date('M',$date)]; echo date(' Y',$date); ?>
   </span>
-  <img id="ajax-loading-mini" src="<?php echo esc_url( admin_url( 'images/wpspin_light.gif' ) ); ?>" alt="loading..." style="display: none;"/>
+  <img id="ajax-loading-mini" src="<?php echo esc_url( admin_url( 'images/wpspin_light.gif' ) ); ?>" alt="loading..." />
   <a class="tribe-mini-ajax next-month" href="#" data-month="<?php echo $tribe_ecp->nextMonth( $current_date ); ?>" title="<?php echo tribe_get_next_month_text(); ?>">
     <span><?php echo tribe_get_next_month_text(); ?></span> 
   </a>
@@ -122,7 +117,7 @@ $monthView = tribe_sort_by_month( $eventPosts, $current_date );
 </table>
 
 <a class="tribe-view-all-events" href="<?php echo tribe_get_events_link(); ?>"><?php _e('View all &raquo;', 'tribe-events-calendar'); ?></a>
-</div> <!-- #calendar_wrap -->
+
 <?php
 if ($old_date){
 	$wp_query->query_vars['eventDate'] = $old_date;
@@ -137,7 +132,7 @@ function tribe_mini_display_day( $day, $monthView ) {
 		$post = $monthView[$day][$i];
 		setup_postdata( $post );
 
-		$return .= '<h5 class="tribe-events-event-title-mini"><a href="'. tribe_get_event_link($post) .'">' . $post->post_title . '</a></h5>';
+		$return .= '<h5 class="tribe-events-event-title-mini"><a href="'. tribe_get_event_link($post) .'">' . __($post->post_title) . '</a></h5>';
 	}
 	$return .= '<span class="tribe-events-arrow"></span>';
 	$return .= '</div>';
@@ -145,3 +140,5 @@ function tribe_mini_display_day( $day, $monthView ) {
 	$return .= "</div>";
 	return $return;
 }
+?>
+<?php wp_reset_postdata(); ?>

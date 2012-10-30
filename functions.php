@@ -19,10 +19,14 @@ function register_ktkdk_sidebars() {
 add_action( 'init', 'register_ktkdk_menus' );
 add_action( 'init', 'register_ktkdk_sidebars' );
 
-add_action('wp_ajax_nopriv_calendar_mini', 'tribe_calendar_mini_grid');
+add_action('wp_ajax_nopriv_calendar-mini', 'calendar_mini');
+add_action('wp_ajax_calendar-mini', 'calendar_mini');
 
 
-
+function calendar_mini() {
+  tribe_calendar_mini_grid();
+  die();
+}
 
 function ktkdk_breadcrumbs() {
 

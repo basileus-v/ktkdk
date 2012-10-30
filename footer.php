@@ -5,11 +5,9 @@
  * Contains the closing of the id=main div and all content after
  */
 ?>
-
-    </div><!-- #main -->
-    <div id="wrapper"> <!-- #wrapper -->
-    <footer id="colophon" role="contentinfo">
-
+   
+      </div><!-- #main -->
+    </div><! -- #wrapper -->
       <?php
 	      /* A sidebar in the footer? Yep. You can can customize
 	       * your footer with three columns of widgets.
@@ -23,7 +21,6 @@
           Kultuuriteaduste ja kunstide doktorikool, aadress: Rävala pst 16, Tallinn 10143. Üldkoordinaator Aleksandra Dolgopolova, <a href="mailto:ktkdk@ema.edu.ee">ktkdk@ema.edu.ee</a>
         </div>
       </div> <!-- #footer -->
-    </footer>
 
 <?php wp_footer(); ?>
 

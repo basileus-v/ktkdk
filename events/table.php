@@ -166,3 +166,4 @@ function display_day( $day, $monthView ) {
 	}
 }
 ?>
+<?php wp_reset_postdata(); ?>

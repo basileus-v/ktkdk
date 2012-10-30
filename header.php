@@ -41,7 +41,7 @@
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
-    <?php
+    i<?php
       wp_enqueue_script("jquery");
 	    /* Always have wp_head() just before the closing </head>
 	     * tag of your theme, or you will break many plugins, which
@@ -54,7 +54,7 @@
     <script type="text/javascript">
       var $j = jQuery.noConflict();      
       $j(document).ready(function() {	
-        //$j('.content-picture').css('min-width', $j('.fill').width() + 600);
+        //$j('.content-picture').css('min-width', $j('.fill').width() + 600);i
         $j('#main').css('min-height', $j('#left-column').height());
         $j('.qtrans_language_chooser').find("li").find("a").find("span").each(function($idx) { if ($idx > 0) {$j(this).html(' | ' + $j(this).html());} });
 
@@ -64,13 +64,14 @@ $j('#calendar_wrap .tribe-mini-ajax').live( 'click', function(e){
     e.preventDefault();    
     var month_target = $j(this).attr("data-month");
     var params = {
-      action: 'calendar_mini',
+      action: 'calendar-mini',
       eventDate: month_target
     };
     $j("#tribe-mini-ajax-month").hide();
     $j("#ajax-loading-mini").show();
-    $j.post("http://193.40.128.92/wp-admin/admin-ajax.php",
-/*	  TribeMiniCalendar.ajaxurl,*/
+    var ajaxurl = '<?php echo admin_url('admin-ajax.php?lang='.qtrans_getLanguage()); ?>';
+    $j.post(
+      ajaxurl,
       params,
       function ( response ) {
         $j("#ajax-loading-mini").hide();
@@ -150,11 +151,9 @@ $j('#calendar_wrap .tribe-mini-ajax').live( 'click', function(e){
         <?php } ?>
       </div> <!-- #submenu -->
           
-      <div id="calendar">
-        <?php print_calendar(); ?>
-        <div class="clear"></div>
-      </div> <!-- #calend -->
-      <?php tribe_calendar_mini_grid(); ?>
+      <div id="calendar_wrap"/>
+        <?php tribe_calendar_mini_grid(); ?>
+      </div> <!-- #calendar_wrap -->
       <div class="banner-left">
         <a href="<?php echo esc_url(site_url('/uritused/2013-2/talvekool-2013/?lang=')).qtrans_getLanguage(); ?>">
         <img src="<?php bloginfo('template_directory'); ?>/images/banners/banner_winter_school_2013.jpg" width="212" height="525" alt="" />

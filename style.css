@@ -90,7 +90,7 @@ ul#language-sidebar a:hover { text-decoration: underline; color: #333;}
 
 div.logo { position:absolute; display:block; z-index:555; margin-left:-191px; margin-top:-5px;}
 
-.content {  margin:-20px 0 0 200px; width:auto; text-align:left; vertical-align:top; }
+.content {  margin:-20px 0 0 230px; width:auto; text-align:left; vertical-align:top; }
 .content-picture { height:100px; min-width: 600px; width:auto; background-image:url(images/pic-01.jpg); background-position:center;  }
 .content-txt { margin: 20px 0 20px 0; min-height: 250px;}
 
@@ -111,7 +111,7 @@ ul.header-menu li a:hover {text-decoration:none; margin-bottom:-18px;  padding-t
 
 /* Submenu */
 div.submenu { position: relative; margin: 10px 18px 0 0px; line-height: 2em; }
-div.submenu a { text-decoration: none; font-weight: bold; color: #333; }
+div.submenu a { text-decoration: none; font-weight: bold; font-size: 14px; color: #333; }
 div.submenu a:hover { text-decoration: none; font-weight: bold; color: #14a4c8; }
 div.submenu ul { list-style: none; padding-left: 0px; }
 
@@ -120,6 +120,9 @@ div.breadcrumb { margin-top: 15px; }
 
 /* List of posts on front page */
 div.latest-posts ul { list-style: none; padding-left: 0px; }
+
+/* Calendar widget */
+.tribe-events-calendar-widget .tribe-events-tooltip { width: 300px; }
 
 /*
 a.lrg { text-decoration:none; padding-top:8px; margin-bottom:-8px; color:#FFF; } 
