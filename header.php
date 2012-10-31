@@ -41,7 +41,7 @@
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
-    i<?php
+    <?php
       wp_enqueue_script("jquery");
 	    /* Always have wp_head() just before the closing </head>
 	     * tag of your theme, or you will break many plugins, which
@@ -93,15 +93,19 @@ $j('#calendar_wrap .tribe-mini-ajax').live( 'click', function(e){
 
   <body <?php body_class(); ?>>
     <div id="header">
-      <div class="contentRight h80 inline-block alr">
+      <div class="contentRight h80 alr">
         <span class="header"><?php bloginfo( 'name' ); ?></span>
-      </div>
-      <div id="language-sidebar-block" class="h80 inline-block">
-        <ul id="language-sidebar">
-          <?php 
-            dynamic_sidebar('language-sidebar');
+        <span class="lang">
+          <?php
+            $baseUrl = preg_replace('/\?lang=([a-zA-Z]{2})/', '', get_permalink());
+            if (strpos($baseUrl,'?') !== false) {
+              $baseUrl .= '&';
+            } else {
+              $baseUrl .= '?';
+            }
           ?>
-        </ul>
+        <a href="<?php echo $baseUrl; ?>lang=et" class="lang">Est</a> | <a href="<?php echo $baseUrl; ?>lang=en" class="lang">Eng</a>
+      </span>
       </div>
     </div> <!-- #header -->
 
