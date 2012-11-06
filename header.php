@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * Displays all of the <head> section and everything up till <div id="main">
  */
@@ -42,7 +42,8 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
     <?php
-      wp_enqueue_script("jquery");
+ //     wp_enqueue_script("jquery");
+ //     wp_enqueue_script("jquery-ui-accordion");
 	    /* Always have wp_head() just before the closing </head>
 	     * tag of your theme, or you will break many plugins, which
 	     * generally use this hook to add elements to <head> such

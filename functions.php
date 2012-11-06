@@ -23,6 +23,19 @@ add_action('wp_ajax_nopriv_calendar-mini', 'calendar_mini');
 add_action('wp_ajax_calendar-mini', 'calendar_mini');
 
 
+/**
+* Use latest jQuery release
+*/
+if (!is_admin()) {
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"), false, '');
+  wp_enqueue_script('jquery');
+
+  wp_deregister_script('jquery-ui');
+  wp_register_script('jquery-ui', ("http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"), false, '');
+  wp_enqueue_script('jquery-ui');
+}
+
 function calendar_mini() {
   tribe_calendar_mini_grid();
   die();
@@ -132,7 +145,7 @@ function ktkdk_breadcrumbs() {
     echo '</div>';
 
   }
-} // end dimox_breadcrumbs()
+} // end ktkdk_breadcrumbs()
 
 
 
