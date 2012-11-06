@@ -6,7 +6,7 @@
   get_header(); ?>
 <!--single.php-->
 <div class="content fleft" >
-  <div class="content-picture" ></div >
+  <?php get_template_part('picture-and-breadcrump'); ?>
   <div class="content-txt" role="main" >
     <?php while (have_posts()) : the_post(); ?>
     <nav id="nav-single" >

@@ -64,46 +64,28 @@
 
       echo '<div class="breadcrumb"><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
 
-      if (is_category()) {
-        $thisCat = get_category(get_query_var('cat'), false);
-        if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' ' . $delimiter . ' ');
-        echo $before . 'Архив рубрики "' . single_cat_title('', false) . '"' . $after;
-
-      } elseif (is_search()) {
-        echo $before . 'Результаты поиска по запросу "' . get_search_query() . '"' . $after;
-
-      } elseif (is_day()) {
-        echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
-        echo '<a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time('F') . '</a> ' . $delimiter . ' ';
-        echo $before . get_the_time('d') . $after;
-
-      } elseif (is_month()) {
-        echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
-        echo $before . get_the_time('F') . $after;
-
-      } elseif (is_year()) {
-        echo $before . get_the_time('Y') . $after;
-
-      } elseif (is_single() && !is_attachment()) {
+      if (is_single() && !is_attachment()) {
         if (get_post_type() != 'post') {
-          $post_type = get_post_type_object(get_post_type());
+          $post_type = get_post_type_object(get_post_type()); //tribe_events
           $slug = $post_type->rewrite;
           echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
           if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
         } else {
-          $cat = get_the_category();
-          $cat = $cat[0];
-          $cats = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-          if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
-          echo $cats;
+          #$cat = get_the_category();
+          #$cat = $cat[0];
+          #$cats = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+          #if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
+          #echo $cats;
           if ($showCurrent == 1) echo $before . get_the_title() . $after;
         }
 
       } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
+        echo '333';
         $post_type = get_post_type_object(get_post_type());
         echo $before . $post_type->labels->singular_name . $after;
 
       } elseif (is_attachment()) {
+        echo '444';
         $parent = get_post($post->post_parent);
         $cat = get_the_category($parent->ID);
         $cat = $cat[0];

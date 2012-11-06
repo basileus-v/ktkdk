@@ -4,7 +4,8 @@
    * The template for displaying latest news (a list of 5 recent posts).
    */
 
-  get_header(); ?>
+  get_header();
+?>
 <!--page-recent-news-->
 <div class="content fleft" >
   <?php get_template_part('picture-and-breadcrump'); ?>

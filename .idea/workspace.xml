@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba45c0f7-fb9b-4df8-86bb-71fca8bf6656" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content-single.php" afterPath="$PROJECT_DIR$/content-single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events-archive.php" afterPath="$PROJECT_DIR$/events-archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events-upcoming.php" afterPath="$PROJECT_DIR$/events-upcoming.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/ecp-page-template.php" afterPath="$PROJECT_DIR$/events/ecp-page-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/ecp-single-template.php" afterPath="$PROJECT_DIR$/events/ecp-single-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/events-list-load-widget-display.php" afterPath="$PROJECT_DIR$/events/events-list-load-widget-display.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/events.css" afterPath="$PROJECT_DIR$/events/events.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/full-address.php" afterPath="$PROJECT_DIR$/events/full-address.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/gridview.php" afterPath="$PROJECT_DIR$/events/gridview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/list.php" afterPath="$PROJECT_DIR$/events/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/single.php" afterPath="$PROJECT_DIR$/events/single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/table-mini.php" afterPath="$PROJECT_DIR$/events/table-mini.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/table.php" afterPath="$PROJECT_DIR$/events/table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events-archive.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news-archive.php" afterPath="$PROJECT_DIR$/news-archive.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-recent-news.php" afterPath="$PROJECT_DIR$/page-recent-news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/picture-and-breadcrump.php" afterPath="$PROJECT_DIR$/picture-and-breadcrump.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reset.css" afterPath="$PROJECT_DIR$/reset.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single.php" afterPath="$PROJECT_DIR$/single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="ktkdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,50 +64,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="events-upcoming.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/events-upcoming.php">
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="107" selection-start="176" selection-end="176" vertical-scroll-proportion="-0.0">
+            <state line="98" column="50" selection-start="3435" selection-end="3435" vertical-scroll-proportion="0.9375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="events-past.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/events-past.php">
+      <file leaf-file-name="page.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="66" selection-start="1195" selection-end="1195" vertical-scroll-proportion="-18.75">
+            <state line="6" column="2" selection-start="119" selection-end="172" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-recent-news.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page-recent-news.php">
+      <file leaf-file-name="single.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="30" selection-start="617" selection-end="617" vertical-scroll-proportion="-13.75">
-              <folding>
-                <element signature="e#9#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news-archive.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/news-archive.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="8" selection-start="478" selection-end="525" vertical-scroll-proportion="-8.75">
-              <folding>
-                <element signature="e#8#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="366" column="1" selection-start="5451" selection-end="5451" vertical-scroll-proportion="0.062937066">
+            <state line="6" column="106" selection-start="106" selection-end="106" vertical-scroll-proportion="-2.5">
               <folding />
             </state>
           </provider>
@@ -147,16 +106,16 @@
       <list>
         <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/picture-and-breadcrump.php" />
-        <option value="$PROJECT_DIR$/single.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/events/table-mini.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/events-archive.php" />
         <option value="$PROJECT_DIR$/events-upcoming.php" />
         <option value="$PROJECT_DIR$/news-archive.php" />
+        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/page-recent-news.php" />
         <option value="$PROJECT_DIR$/events-past.php" />
-        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/single.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -518,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="88" selection-end="88" vertical-scroll-proportion="-1.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -537,13 +489,6 @@
     <entry file="file://$PROJECT_DIR$/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.44055945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="114" selection-end="114" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
@@ -565,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="108" selection-start="2253" selection-end="2568" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/events-upcoming.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="107" selection-start="176" selection-end="176" vertical-scroll-proportion="-0.0">
@@ -581,16 +519,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/news-archive.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="8" selection-start="478" selection-end="525" vertical-scroll-proportion="-8.75">
+        <state line="17" column="8" selection-start="478" selection-end="525" vertical-scroll-proportion="0.29829547">
           <folding>
             <element signature="e#8#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="406" column="49" selection-start="6004" selection-end="6004" vertical-scroll-proportion="0.9020979">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/page-recent-news.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="617" selection-end="617" vertical-scroll-proportion="-13.75">
+        <state line="7" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.14914773">
           <folding>
             <element signature="e#9#91#0" expanded="true" />
           </folding>
@@ -599,14 +544,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/events-past.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="66" selection-start="1195" selection-end="1195" vertical-scroll-proportion="-18.75">
+        <state line="18" column="65" selection-start="625" selection-end="625" vertical-scroll-proportion="0.3409091">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="366" column="1" selection-start="5451" selection-end="5451" vertical-scroll-proportion="0.062937066">
+        <state line="6" column="106" selection-start="106" selection-end="106" vertical-scroll-proportion="-2.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="2" selection-start="119" selection-end="172" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="50" selection-start="3435" selection-end="3435" vertical-scroll-proportion="0.9375">
           <folding />
         </state>
       </provider>
