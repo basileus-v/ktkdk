@@ -1,2 +1,2 @@
-<div class="content-picture"></div>
+<div class="content-picture" ></div >
 <?php ktkdk_breadcrumbs(); ?>
