@@ -416,6 +416,10 @@ div.recent-posts ul {
   padding-left: 0px;
 }
 
+div.recent-posts ul li {
+  margin-bottom: 30px;
+}
+
 span.recent-post-date {
   font-weight: bold;
   font-size: 14px;
@@ -430,7 +434,10 @@ a.recent-post-title {
 
 div.recent-post-excerpt {
   font-size: 11px;
-  margin-bottom: 10px;
+}
+
+div.recent-post-excerpt p {
+  margin: 0px;
 }
 
 /*
